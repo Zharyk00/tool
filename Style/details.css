@@ -1,0 +1,30 @@
+.main-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: 100px 1fr;
+      grid-template-rows: 100px 1fr;
+}
+
+.main-container .form-container {
+  display: -ms-grid;
+  display: grid;
+  grid-auto-flow: column;
+  -ms-grid-columns: (minmax(300px, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill minmax(300px, 1fr));
+  place-items: center;
+}
+
+.main-container .post-container {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+.main-container .post-container h3 {
+  display: -ms-grid;
+  display: grid;
+  place-content: center;
+}
+/*# sourceMappingURL=details.css.map */
