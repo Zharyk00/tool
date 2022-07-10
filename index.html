@@ -3,27 +3,32 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="./Style/index.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
   </head>
   <body>
     <div class="container">
-      <div class="search">
-        <label for="search"
-          >Search by <span style="color: #00b7ff">title</span> and body</label
-        >
-        <input type="text" id="search" />
+      <div class="search__box">
+        <input type="text" id="search" placeholder="search by title and body" />
+        <i class="material-icons">search</i>
       </div>
       <div class="links">
-        <a href="titles.html" id="titles">Titles</a>
-        <a href="bodies.html" id="bodies">Bodies</a>
+        <li id="green-box">Green-box</li>
+        <li id="red-box">Red-box</li>
+        <li id="blue-box">blue-box</li>
+        <li id="aqua-box">aqua-box</li>
+        <li id="orange-box">orange-box</li>
       </div>
     </div>
 
     <hr />
-    <a href="#"><div id="posts"></div></a>
-    <a href="details.html" id="details"></a>
+    <div id="posts"></div>
+
     <script src="index.js"></script>
   </body>
 </html>

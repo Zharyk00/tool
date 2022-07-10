@@ -6,6 +6,7 @@ const button__body = document.getElementById("button__body")
 const edit__body = document.getElementById("edit__body")
 const edit__title = document.getElementById("edit__title")
 const delete__button = document.getElementById("delete__button")
+
 const err = ''
 
 const data = localStorage.getItem('id')
@@ -15,7 +16,7 @@ function cheking() {
         fetch(`https://jsonplaceholder.typicode.com/posts/${data}`)
             .then(res => res.json())
             .then(({ id, title, body }) => (
-                post__id.innerHTML = id,
+                post__id.innerHTML = `<labelv style="color: #00b7ff">Id</labelv> <br/><br/>${id}`,
                 post__title.innerHTML = title,
                 post__body.innerHTML = body
             ))
@@ -31,7 +32,7 @@ const deletePost = async () => {
         method: 'DELETE',
     })
         .then(res => res.json())
-        .then(res => console.log(res))
+        .then(res => res === {} ? window.location.href = 'index.html' : res)
 }
 
 const updateTitle = () => {
@@ -64,7 +65,7 @@ const updateBody = () => {
 
 }
 
-delete__button.onclick = (event) => { event.preventDefault(), deletePost(), window.location.href = `index.html` }
+delete__button.onclick = (event) => { event.preventDefault(), deletePost() }
 
 button__title.onclick = (event) => { event.preventDefault(), updateTitle() }
 

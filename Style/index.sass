@@ -1,32 +1,79 @@
+
+*
+    margin: 0px
+    padding: 0px
+
+body
+    background-color: #1C1C1E
+    color: white
+    padding: 0px 30px
+
 .container
     display: grid
-    grid-template-columns: 1fr 3fr 0.2fr
-    .search
+    grid-template-columns: repeat(auto-fit , minmax(320px , 1fr))
+    height: 60px
+    place-items: center
+    .search__box
         display: grid
-        grid-auto-flow: row
-        font-size: 20px
+        align-items: center
+        grid-auto-flow: column
+        column-gap: 20px
+        #search
+            color: #EED96E
+            padding-left: 10px
+            width: 355px
+            height: 23px
+            border: 1px solid #EED96E
+            outline: none
+            background: none
+            @media (max-width: 415px)
+                width: 300px
     .links
         display: grid
-        justify-content: end
-        align-content: center
+        column-gap: 20px
         grid-auto-flow: column
-        column-gap: 30px
-        a
-            text-decoration: none
-            color: #0084ff
+        justify-items:
+        li
+            list-style: none
+            cursor: pointer
+        #green-box
+            color: green
+        #red-box
+            color: red
+        #blue-box
+            color: blue
+        #aqua-box
+            color: aqua
+        #orange-box
+            color: orange
+
 #posts
     display: grid
-    grid-template-columns: repeat(auto-fill , minmax(300px , 1fr))
+    margin-top: 30px
+    grid-template-columns: repeat(auto-fill , minmax(320px , 1fr))
     gap: 20px
-
-    #postContainer
-        border: 1px solid black
+    .postContainer
+        display: grid
+        border: 1px solid #EED96E
+        padding: 10px
+        row-gap: 10px
         #posts__title
-            color: #00b7ff
-            padding-bottom: 5px
+            display: grid
+            justify-items: center
 
+            label
+                color: #EED96E
         #posts__body
-            color: #000000
+            display: grid
+            justify-items: center
 
-.hide
-    display: none
+            label
+                color: #EED96E
+        .link
+            display: grid
+            justify-content: center
+            a
+                color: #63C5EA
+
+    .hide
+        display: none

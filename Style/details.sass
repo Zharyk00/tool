@@ -1,12 +1,56 @@
+body
+    padding: 20px
+    background-color: #1C1C1E
+    color: white
+
 .main-container
     display: grid
-    grid-template-columns: 1fr
+    grid-template-columns: 1
     grid-template-rows: 100px 1fr
+    row-gap: 20px
     .form-container
         display: grid
-        grid-auto-flow: column
-        grid-template-columns: repeat(auto-fill minmax(300px , 1fr))
+        grid-template-columns: repeat(auto-fit , minmax(300px , 1fr))
+        row-gap: 5px
+
         place-items: center
+        #delete__button
+            height: 24px
+            background: none
+            border: 1px solid #EED96E
+            color: #EED96E
+            cursor: pointer
+            &:active
+                color: red
+
+        .edit
+            display: grid
+            grid-auto-flow: column
+            align-items: end
+            gap: 10px
+
+            .search
+                display: grid
+                grid-auto-flow: row
+            button
+                height: 24px
+                background: none
+                border: 1px solid #EED96E
+                color: #EED96E
+                cursor: pointer
+                &:active
+                    color: red
+            input
+                color: #EED96E
+                padding-left: 10px
+                width: 200px
+                height: 20px
+                border: 1px solid #EED96E
+                outline: none
+                background: none
+
+            label
+                color: #EED96E
     .post-container
         display: grid
         place-items: center

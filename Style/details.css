@@ -1,19 +1,80 @@
+body {
+  padding: 20px;
+  background-color: #1C1C1E;
+  color: white;
+}
+
 .main-container {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr;
-      grid-template-columns: 1fr;
+  -ms-grid-columns: 1;
+      grid-template-columns: 1;
   -ms-grid-rows: 100px 1fr;
       grid-template-rows: 100px 1fr;
+  row-gap: 20px;
 }
 
 .main-container .form-container {
   display: -ms-grid;
   display: grid;
-  grid-auto-flow: column;
-  -ms-grid-columns: (minmax(300px, 1fr))[auto-fill];
-      grid-template-columns: repeat(auto-fill minmax(300px, 1fr));
+  -ms-grid-columns: (minmax(300px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  row-gap: 5px;
   place-items: center;
+}
+
+.main-container .form-container #delete__button {
+  height: 24px;
+  background: none;
+  border: 1px solid #EED96E;
+  color: #EED96E;
+  cursor: pointer;
+}
+
+.main-container .form-container #delete__button:active {
+  color: red;
+}
+
+.main-container .form-container .edit {
+  display: -ms-grid;
+  display: grid;
+  grid-auto-flow: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: end;
+  gap: 10px;
+}
+
+.main-container .form-container .edit .search {
+  display: -ms-grid;
+  display: grid;
+  grid-auto-flow: row;
+}
+
+.main-container .form-container .edit button {
+  height: 24px;
+  background: none;
+  border: 1px solid #EED96E;
+  color: #EED96E;
+  cursor: pointer;
+}
+
+.main-container .form-container .edit button:active {
+  color: red;
+}
+
+.main-container .form-container .edit input {
+  color: #EED96E;
+  padding-left: 10px;
+  width: 200px;
+  height: 20px;
+  border: 1px solid #EED96E;
+  outline: none;
+  background: none;
+}
+
+.main-container .form-container .edit label {
+  color: #EED96E;
 }
 
 .main-container .post-container {

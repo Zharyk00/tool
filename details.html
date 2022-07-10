@@ -10,27 +10,32 @@
   <body>
     <div class="main-container">
       <form class="form-container">
-        <div class="edite_title">
-          <label for="etit_title">Update title</label>
-          <input id="edit__title" type="text" />
+        <div class="edit">
+          <div class="search">
+            <label for="edit__title">Update title</label>
+            <input id="edit__title" type="text" />
+          </div>
           <button id="button__title">Update title</button>
         </div>
-        <div>
-          <label for="edit_body">Update body</label>
-          <input id="edit__body" type="text" />
+
+        <div class="edit">
+          <div class="search">
+            <label for="edit_body">Update body</label>
+            <input id="edit_body" type="text" />
+          </div>
           <button id="button__body">Update body</button>
         </div>
         <button id="delete__button">Delete this post</button>
       </form>
       <div class="post-container">
-        <h1>Details about post</h1>
+        <h1 style="color: #f75435">Details about post</h1>
         <h2 id="id"></h2>
-        <div style="color: #00b7ff">
-          <h3>Title</h3>
+        <div>
+          <h3 style="color: #00b7ff">Title</h3>
           <h2 id="title"></h2>
         </div>
         <div>
-          <h3>body</h3>
+          <h3 style="color: #00b7ff">body</h3>
           <h2 id="body"></h2>
         </div>
       </div>
