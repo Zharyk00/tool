@@ -6,7 +6,7 @@
 body {
   background-color: #1C1C1E;
   color: white;
-  padding: 0px 30px;
+  padding: 30px;
 }
 
 .container {
@@ -14,8 +14,9 @@ body {
   display: grid;
   -ms-grid-columns: (minmax(320px, 1fr))[auto-fit];
       grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  height: 60px;
+  height: 90px;
   place-items: center;
+  row-gap: 20px;
 }
 
 .container .search__box {
