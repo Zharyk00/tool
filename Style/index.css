@@ -26,8 +26,8 @@ body {
       -ms-flex-align: center;
           align-items: center;
   grid-auto-flow: column;
-  -webkit-column-gap: 20px;
-          column-gap: 20px;
+  -webkit-column-gap: 10px;
+          column-gap: 10px;
 }
 
 .container .search__box #search {
@@ -42,45 +42,8 @@ body {
 
 @media (max-width: 415px) {
   .container .search__box #search {
-    width: 300px;
+    width: 290px;
   }
-}
-
-.container .links {
-  display: -ms-grid;
-  display: grid;
-  -webkit-column-gap: 20px;
-          column-gap: 20px;
-  grid-auto-flow: column;
-}
-
-.container .links input {
-  border: 1px solid #EED96E;
-  outline: none;
-  background: none;
-  padding: 4px;
-  cursor: pointer;
-  width: auto hell worilkmlk;
-}
-
-.container .links #green-box {
-  color: green;
-}
-
-.container .links #red-box {
-  color: red;
-}
-
-.container .links #blue-box {
-  color: blue;
-}
-
-.container .links #aqua-box {
-  color: aqua;
-}
-
-.container .links #orange-box {
-  color: orange;
 }
 
 #posts {

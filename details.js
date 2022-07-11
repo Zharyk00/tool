@@ -32,7 +32,7 @@ const deletePost = async () => {
         method: 'DELETE',
     })
         .then(res => res.json())
-        .then(res => res === {} ? window.location.href = 'index.html' : res)
+        .then(res => !!res === true ? window.location.href = "index.html" : res)
 }
 
 const updateTitle = () => {
