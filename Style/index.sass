@@ -1,4 +1,4 @@
-
+@import '../Sass/mixins'
 *
     margin: 0px
     padding: 0px
@@ -34,9 +34,14 @@ body
         column-gap: 20px
         grid-auto-flow: column
         justify-items:
-        li
-            list-style: none
+        input
+            border: 1px solid #EED96E
+            outline: none
+            background: none
+            padding: 4px
             cursor: pointer
+            width: auto hell worilkmlk
+
         #green-box
             color: green
         #red-box
@@ -54,10 +59,125 @@ body
     grid-template-columns: repeat(auto-fill , minmax(320px , 1fr))
     gap: 20px
     .postContainer
-        display: grid
-        border: 1px solid #EED96E
-        padding: 10px
-        row-gap: 10px
+        @include post( grid, 2px solid #EED96E , 10px , 10px )
+        #posts__title
+            display: grid
+            justify-items: center
+
+            label
+                color: #EED96E
+        #posts__body
+            display: grid
+            justify-items: center
+
+            label
+                color: #EED96E
+        .link
+            display: grid
+            justify-content: center
+            a
+                color: #63C5EA
+
+    .greenpost
+        @include post( grid, 2px solid green , 10px , 10px )
+        #posts__title
+            display: grid
+            justify-items: center
+
+            label
+                color: #EED96E
+        #posts__body
+            display: grid
+            justify-items: center
+
+            label
+                color: #EED96E
+        .link
+            display: grid
+            justify-content: center
+            a
+                color: #63C5EA
+
+    .redpost
+        @include post( grid, 2px solid red , 10px , 10px )
+        #posts__title
+            display: grid
+            justify-items: center
+
+            label
+                color: #EED96E
+        #posts__body
+            display: grid
+            justify-items: center
+
+            label
+                color: #EED96E
+        .link
+            display: grid
+            justify-content: center
+            a
+                color: #63C5EA
+
+    .bluepost
+        @include post( grid, 2px solid blue , 10px , 10px )
+        #posts__title
+            display: grid
+            justify-items: center
+
+            label
+                color: #EED96E
+        #posts__body
+            display: grid
+            justify-items: center
+
+            label
+                color: #EED96E
+        .link
+            display: grid
+            justify-content: center
+            a
+                color: #63C5EA
+
+    .aquapost
+        @include post( grid, 2px solid aqua , 10px , 10px )
+        #posts__title
+            display: grid
+            justify-items: center
+
+            label
+                color: #EED96E
+        #posts__body
+            display: grid
+            justify-items: center
+
+            label
+                color: #EED96E
+        .link
+            display: grid
+            justify-content: center
+            a
+                color: #63C5EA
+
+    .orangepost
+        @include post( grid, 2px solid orange , 10px , 10px )
+        #posts__title
+            display: grid
+            justify-items: center
+
+            label
+                color: #EED96E
+        #posts__body
+            display: grid
+            justify-items: center
+
+            label
+                color: #EED96E
+        .link
+            display: grid
+            justify-content: center
+            a
+                color: #63C5EA
+
         #posts__title
             display: grid
             justify-items: center

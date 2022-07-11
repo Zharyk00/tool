@@ -12,17 +12,13 @@ let url = "https://jsonplaceholder.typicode.com/posts"
 addEventListener('input', e => {
     let value = e.target.value.toLowerCase()
     arr.forEach(({ title, body, element }) => {
-        let pattern = new RegExp(`${search.value}`, 'gi')
         let checking = title.toLowerCase().includes(value) || body.toLowerCase().includes(value)
-
         element.classList.toggle("hide", !checking)
-
-        // element.innerHTML = element.textContent.replace(pattern, match => `<mark>${match}</mark>`)
     })
-
 })
 
 
+console.log(arr);
 
 
 fetch(url)
@@ -30,9 +26,27 @@ fetch(url)
     .then(data => {
 
         arr = data.map(({ title, body, id }) => {
-
             let postContainer = document.createElement('div')
-            postContainer.className = "postContainer"
+
+            if (id % 1 === 0) {
+                postContainer.className = "postContainer"
+            }
+            if (id % 2 === 0) {
+                postContainer.className = "greenpost"
+            } if (id % 3 === 0) {
+                postContainer.className = "redpost"
+            }
+            if (id % 4 === 0) {
+                postContainer.className = "bluepost"
+            } if (id % 5 === 0) {
+                postContainer.className = 'aquapost'
+            }
+            if (id % 7 === 0) {
+                postContainer.className = 'orangepost'
+            }
+
+
+
 
             let post__title = document.createElement("div")
             post__title.id = "posts__title"
